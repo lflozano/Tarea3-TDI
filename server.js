@@ -14,10 +14,10 @@ app.use(cors(corsOptions));
 const { Pool } = require('pg');
 
 const pool = new Pool({
-  user: 'luis.lozano@uc.cl',
+  user: import.meta.env.VITE_USER,
   host: 'langosta.ing.puc.cl',
-  database: 'luis.lozano@uc.cl',
-  password: '18639690',
+  database: import.meta.env.VITE_USER,
+  password: import.meta.env.VITE_PASSWORD,
   port: 5432,
 });
 
